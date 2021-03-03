@@ -1,5 +1,5 @@
 {
-  "name": "Add PID Filter",
+  "name": "add_pid_filter",
   "version": "0.1.2",
   "private": true,
   "scripts": {
