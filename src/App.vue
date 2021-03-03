@@ -1,15 +1,18 @@
 <template>
-  <div id="app">
+  <v-app>
     <Navigation :is-signed-in="isSignedIn" @signIn="signIn" @signOut="signOut"/>
     <AddPidFilter :is-signed-in="isSignedIn" :auth-instance="authInstance"/>
     <notifications group="app" position="bottom left"/>
-  </div>
+    <Instructions />
+  </v-app>
 </template>
 
 <script>
 import Vue from 'vue'
 import AddPidFilter from "./components/AddPidFilter.vue";
 import Navigation from "./components/NavigationBar.vue";
+import Instructions from "./components/Instructions.vue";
+
 import 'vuetify/dist/vuetify.css'
 import VueGapi from 'vue-gapi'
 
@@ -24,6 +27,7 @@ export default {
   name: "app",
   components: {
     Navigation,
+    Instructions,
     AddPidFilter
   },
   data() {
